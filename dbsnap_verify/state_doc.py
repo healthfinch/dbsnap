@@ -109,7 +109,7 @@ class StateDoc(DocToObject):
 
     @property
     def state_doc_s3_key(self):
-        return "state-doc-{}.json".format(self.state_doc_name)
+        return "rds-snapshot/state-doc-{}.json".format(self.state_doc_name)
 
     def _save_state_doc_in_s3(self):
         if self.state_doc_bucket_name:
